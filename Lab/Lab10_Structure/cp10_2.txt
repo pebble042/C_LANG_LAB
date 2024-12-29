@@ -1,0 +1,48 @@
+Checkpoint 10.2
+จงอ่านโปรแกรมในรูปที่ 10.2 ให้เข้าใจแล้วลองรันโปรแกรม จากนั้นจงตอบคำถามต่อไปนี้
+10.2.1 ในโปรแกรมดังกล่าว มีการประกาศสตรัคเจอร์อะไรบ้าง วิธีการประกาศต่างกันอย่างไร
+    Ans. ในโปรแกรมดังกล่าว มีการประกาศสตรัคเจอร์ 2 แบบ
+
+    แบบที่ 1 ใช้คำสั่ง struct ในการประกาศสตรัคเจอร์ date
+    --------------------------------------------
+    struct date { // date คือชื่อของ structure
+        int day;
+        int month;
+        int year;
+    };
+    --------------------------------------------
+
+    แบบที่ 2 ใช้คำสั่ง typdef struct ในการประกาศสตรัคเจอร์ person
+    --------------------------------------------
+    typdef struct {
+        char name[30];
+        int age;
+        struct date bday;
+    } person; // person คือชื่อของ structure
+    --------------------------------------------
+
+
+10.2.2 การประกาศตัวแปรสตรัคเจอร์ แบบ person กับแบบ date ต่างกันอย่างไร
+    Ans. person ใช้คำสั่ง typdef struct ในการประกาศสตรัคเจอร์
+         ใช้คำสั่ง struct ในการประกาศสตรัคเจอร์ date
+
+         --------------------------------
+         แบบ typdef struct
+         typdef struct{
+            type1 fieldName1;
+            type2 fieldName2;
+            ...
+            typeN fieldNameN;
+         } NEW_TYPE;
+         
+         NEW_TYPE strName;
+         --------------------------------
+         แบบ struct
+         struct tagName{
+            type1 fieldName1;
+            type2 fieldName2;
+            ...
+            typeN fieldNameN;
+         } ;
+         struct tagName strName;
+         --------------------------------
